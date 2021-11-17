@@ -1,7 +1,7 @@
 # Create a Workload Identity Pool Provider for Bitbucket Pipelines via OpenID Connect (OIDC)
 
 This module will create a workload identity pool provider specifically designed to allow Bitbucket pipelines access.
-* This is designed to work with module "terraform-google-bitbucket-workload-identity-pool". Ensure you use the same gcp_project_ids.
+* This is designed to work with module "llcloudstudio/bitbucket-workload-identity-pool/google". Ensure you use the same gcp_project_ids.
 * This pool will restrict access to a specific combination of Bitbucket workspace+repository+deployment uuids.
 
 
@@ -34,7 +34,7 @@ locals {
 }
 
 module "identity_provider_for_pipeline-a" {
-  source                   = "terraform-google-bitbucket-identity-pool-provider"
+  source                   = "llcloudstudio/bitbucket-identity-pool-provider/google"
   project_id               = "gcp_project_id"
   provider_id              = "name_of_bb_deployment"
   identity_pool_name       = "identity_pool_name"
