@@ -1,4 +1,4 @@
-#output "name" {
-#    description = "workload identity pool name"
-#    value = google_iam_workload_identity_pool.A.name
-#}
+output "bb_deployment_uuid" {
+    description = "bb_deployment_uuid passed into module"
+    value = var.bb_deployment_uuid
+}
